@@ -1,0 +1,38 @@
+[project]
+name = "pretalx-oidc-auth"
+dynamic = ["version"]
+description = "pretalx plugin for OIDC authentication"
+readme = "README.rst"
+license = {text = "Apache Software License"}
+keywords = ["pretalx"]
+authors = [
+  {name = "Your name", email = "your-email@example.org"},
+]
+maintainers = [
+  {name = "Your name", email = "your-email@example.org"},
+]
+
+dependencies = []
+
+[project.urls]
+homepage = "https://github.com/snakedev24/pretalx-oidc-plugin.git"
+repository = "https://github.com/snakedev24/pretalx-oidc-plugin.git.git"
+
+[project.entry-points."pretalx.plugin"]
+pretalx_oidc_auth = "pretalx_oidc_auth:PretalxPluginMeta"
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "pretalx_oidc_auth.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["pretalx*"]
+
+[tool.check-manifest]
+ignore = [".*"]

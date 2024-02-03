@@ -1,0 +1,6 @@
+recursive-include pretalx_oidc_auth/static *
+recursive-include pretalx_oidc_auth/templates *
+exclude pretalx_oidc_auth/locale/django.pot
+recursive-include pretalx_oidc_auth/locale *
+recursive-include pretalx_oidc_auth *.py
+include Makefile
